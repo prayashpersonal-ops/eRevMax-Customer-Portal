@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOG_HOME" value="logs"/>
+
+    <!-- Console -->
+
+    <appender name="CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %highlight(%-5level) %cyan(%d{yyyy-MM-dd HH:mm:ss.SSS}) [%thread] %green(%logger{36}) - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Application Logs -->
+
+    <appender name="APPLICATION" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/application/application.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/application/application-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- API Logs -->
+
+    <appender name="API" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/api/api.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/api/api-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Authentication Logs -->
+
+    <appender name="AUTH" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/auth/auth.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/auth/auth-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Database Logs -->
+
+    <appender name="DATABASE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/database/database.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/database/database-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- Error Logs -->
+
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/error/error.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/error/error-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{50} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <!-- API Aspect Logs -->
+    <logger name="com.example.CustomerPortalBackend.logging.ApiLoggingAspect" level="INFO"
+            additivity="false">
+        <appender-ref ref="API"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Authentication Aspect Logs -->
+    <logger name="com.example.CustomerPortalBackend.logging.AuthenticationLoggingAspect"
+            level="INFO"
+            additivity="false">
+        <appender-ref ref="AUTH"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Database Aspect Logs -->
+    <logger name="com.example.CustomerPortalBackend.logging.DatabaseLoggingAspect"
+            level="INFO"
+            additivity="false">
+        <appender-ref ref="DATABASE"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Service/Application Logs -->
+    <logger name="com.example.CustomerPortalBackend.logging.ServiceLoggingAspect"
+            level="INFO"
+            additivity="false">
+        <appender-ref ref="APPLICATION"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <!-- Spring -->
+    <logger name="org.springframework" level="WARN"/>
+
+    <!-- Hibernate -->
+    <logger name="org.hibernate" level="WARN"/>
+
+    <!-- Root Logger -->
+    <root level="INFO">
+        <appender-ref ref="APPLICATION"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,866 @@
+{
+  "info": {
+    "name": "CustomerPortal",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "id": "7c2d8f0c-070a-4f7b-aaad-036fd623925a",
+      "name": "Admin",
+      "item": [
+        {
+          "id": "4ea4c0f8-e9ce-4da7-9fb3-7bdfdc1f636d",
+          "name": "Update UserHotel Id",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/updateHotelStatus",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "updateHotelStatus"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"userHotelId\":\"032573cd-6a84-11f1-9bf5-a5f3d44cfd12\",\"active\":true}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODA3NDExLCJleHAiOjE3ODE4OTM4MTEsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.x39BYlMrVnSIlBJAB7EzO1NG2Q5BH0yMBioO8BbnFIk",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "eab40b5c-c37d-43ac-b2ed-f7a784f158c0",
+          "name": "See All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/seeAllUsers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "seeAllUsers"
+              ],
+              "port": "8080"
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODkyNzA5LCJleHAiOjE3ODE5NzkxMDksImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.52M54pfDTW2SLJ_b2TSqi2Tlb6Wpw1W4oJGRvZ-AaCU",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "a622e853-19e5-4d9c-91a9-d1b969e12681",
+          "name": "User Access Denied By email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/userAccessDeniedByEmail",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "userAccessDeniedByEmail"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"a@gmail.com\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlMDU2NWI0ZS00YTJiLTQ3NTAtOGI1MS0wYzBiY2Y4MmIwZWQiLCJzdWIiOiJiMUBnbWFpbC5jb20iLCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSIsImlhdCI6MTc4MDU4MjEwMCwiZXhwIjoxNzgxMTg2OTAwLCJ0eXAiOiJyZWZyZXNoIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdfQ.cnWCNJx78xAfgcXKNGgrochocitSYMLfraklZBAHBao",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "78b71b6d-eec5-41e0-87fe-b771a6c27fe1",
+          "name": "Login Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "login"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"b1@gmail.com\",\"password\":\"a123\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "52a7e093-7acc-4c05-9cd1-ae4b6e9b920a",
+          "name": "logout Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "logout"
+              ],
+              "port": "8080"
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwMTdjODBkOS1jZWVlLTQwNTEtOTUwMi00NTk0NDcwYWIwZjQiLCJzdWIiOiJiMUBnbWFpbC5jb20iLCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSIsImlhdCI6MTc4MDU4MjQ2NCwiZXhwIjoxNzgxMTg3MjY0LCJ0eXAiOiJyZWZyZXNoIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdfQ.jqq32bWPt2r2O1Y5byfJn8y6QfDLFgktsCi3G6FY9pg",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "3829dadc-e4af-4201-a791-4dd6061b5574",
+          "name": "Refresh Token Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "refresh"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"refreshToken\":\"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MTdlOTU4ZS1hZjQxLTQ0ZjctYmIyNS0yYjg5Mzc0MTc0ZDUiLCJzdWIiOiJiMUBnbWFpbC5jb20iLCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSIsImlhdCI6MTc4MDkxOTQ0NiwiZXhwIjoxNzgxNTI0MjQ2LCJ0eXAiOiJyZWZyZXNoIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdfQ.tG6e-6FWK1SGw2sPxCFWbL1sBbrnKBE2R0fxyDK5Ki0\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "2a3e9414-bf81-4c87-b121-0bcf19dd3295",
+          "name": "User Access Granted By Email",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/admin/userAccessGrantedById",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "admin",
+                "userAccessGrantedById"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"a@gmail.com\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODEwNDIwLCJleHAiOjE3ODE4OTY4MjAsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.FTIHZP3lW4Sf0URbdqGgPY7D3ZqNg5tOuvlLP1-rt4E",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "6df537cf-d8b0-48e8-83ec-aee16ebe9168",
+      "name": "Hotels",
+      "item": [
+        {
+          "id": "d80f1195-266e-48a9-95a1-2991d0ad765a",
+          "name": "Map RoomRateMapping by User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/roomRateMappingPlan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "roomRateMappingPlan"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"hotelName\":\"Radisson Blu Kolkata\",\"roomTypeCode\":\"DLX-1\",\"ratePlanCode\":\"BAR-RADIS\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImVuYWJsZWQiOnRydWUsInR5cCI6ImFjY2VzcyIsImlhdCI6MTc4MTg0MzM1OSwiZXhwIjoxNzgxOTI5NzU5LCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSJ9.UsrCy_tFWO3PUye9FpF5mY_IiH3-tNOSfl5Bq7I5ZbA",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d492e053-0dc8-48a7-aba4-6e9844ad1954",
+          "name": "See All RoomRateMappings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/seeAllRoomRateMapping",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "seeAllRoomRateMapping"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxNzk2Nzc2LCJleHAiOjE3ODE4ODMxNzYsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.8TUJA4up24VfgrYpackCV_TApThLMjXo0w29VAVcKhU",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "e6d56884-2ff2-4ced-99aa-50f0f83cb1df",
+          "name": "Get Room Type",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/getRoomType",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "getRoomType"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"code\":\"ITC Royal\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgwNzY4NTg1LCJleHAiOjE3ODA4NTQ5ODUsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.UxoDPHPDILBovJtWPwperP1uWDfRFXsIWGNdBWfb_cg",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d9157291-04d2-484e-a8b4-a6d33bf3b351",
+          "name": "Get The Hotels Details",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/getHotelDetailsWithRoomTypeAndPatePlan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "getHotelDetailsWithRoomTypeAndPatePlan"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"code\":\"ITC Royal\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODEwNDIwLCJleHAiOjE3ODE4OTY4MjAsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.FTIHZP3lW4Sf0URbdqGgPY7D3ZqNg5tOuvlLP1-rt4E",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "d5d9e3db-3dde-445a-a53f-73897ad68ef9",
+          "name": "See All RoomTypes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/seeAllRoomTypes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "seeAllRoomTypes"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxNzI1MTI2LCJleHAiOjE3ODE4MTE1MjYsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.weHtHL5LMyj945LiW2MXQ3L2gM2ITPH_rKPjYPEXEkY",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b75328da-4d09-4e9a-8ddb-0c29ef40e186",
+          "name": "See All Hotels",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/seeAllHotels",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "seeAllHotels"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODEwNDIwLCJleHAiOjE3ODE4OTY4MjAsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.FTIHZP3lW4Sf0URbdqGgPY7D3ZqNg5tOuvlLP1-rt4E",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "9eb2f250-ecb8-4aab-9f2a-4c92e480da9b",
+          "name": "Get Rate Plan",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/getRatePlan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "getRatePlan"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"code\":\"DLX\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxNzIyMzU3LCJleHAiOjE3ODE4MDg3NTcsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.mHbdDYbiy_p2iXpAyRs5lgiB94UpA5GvuQzUD9L4dV8",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "45a1f41c-408c-4cf0-a0b1-f0ac486bf39c",
+          "name": "Hotels add to User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/addHotel",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "addHotel"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"a@gmail.com\",\"hotels\":[{\"name\":\"ITC Royal Bengal\"}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgxODQzMjU4LCJleHAiOjE3ODE5Mjk2NTgsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.1rO7qU3dFpHl8R4Fw0II3OEMTXGZnXrzGWsgPQr0BJQ",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "276c239c-6a11-45ff-a7ec-0ecb3a4db260",
+          "name": "See All RatePlans",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/seeAllRatePlans",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "seeAllRatePlans"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "1720d153-c972-4aaf-a6f7-f5e9760f715e",
+          "name": "find hotels by name",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/hotels/listOfHotelsByName",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "hotels",
+                "listOfHotelsByName"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"n\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiMUBnbWFpbC5jb20iLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiZW5hYmxlZCI6dHJ1ZSwidHlwIjoiYWNjZXNzIiwiaWF0IjoxNzgwNTc5NjMxLCJleHAiOjE3ODA2NjYwMzEsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIn0.m9jHNbE1ofhNiFkouRgTB_EiQHVnjoXauPt4I1nZqtA",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "5922362f-8bb7-4997-9bc1-4bffbce63803",
+      "name": "User",
+      "item": [
+        {
+          "id": "f0acf5f4-f021-4be8-8429-9e472f5e8691",
+          "name": "logout User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "logout"
+              ],
+              "port": "8080"
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwMTdjODBkOS1jZWVlLTQwNTEtOTUwMi00NTk0NDcwYWIwZjQiLCJzdWIiOiJiMUBnbWFpbC5jb20iLCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSIsImlhdCI6MTc4MDU4MjQ2NCwiZXhwIjoxNzgxMTg3MjY0LCJ0eXAiOiJyZWZyZXNoIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdfQ.jqq32bWPt2r2O1Y5byfJn8y6QfDLFgktsCi3G6FY9pg",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "b6df69a2-4ef5-458e-a805-e67eff58311a",
+          "name": "Refresh Token User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/refresh",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "refresh"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"refreshToken\":\"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjN2IzYzMxMi02MzcyLTRhYWUtYjgzYS05ZWMyMTYwZmRkZTAiLCJzdWIiOiJhQGdtYWlsLmNvbSIsImlzcyI6ImFwaS5zd2F0aXNoYXcuY29tIiwiaWF0IjoxNzgxNDIzMTYyLCJleHAiOjE3ODIwMjc5NjIsInR5cCI6InJlZnJlc2giLCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.RMVmhvWNebrU7vbYiFga_dGNDguGbNV-T6zHyFMmZZQ\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "6f8f43bd-65d8-4cc0-aa89-67b9f48014f5",
+          "name": "Login Users",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "login"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"a@gmail.com\",\"password\":\"a123\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "62d56d13-1817-4258-bf73-fcca26e12f6b",
+          "name": "Toggle Sellable By User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/toggleListOfHotelsByUserSellable",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "toggleListOfHotelsByUserSellable"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"ITC Royal Bengal\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImVuYWJsZWQiOnRydWUsInR5cCI6ImFjY2VzcyIsImlhdCI6MTc4MTgxMDQ0OCwiZXhwIjoxNzgxODk2ODQ4LCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSJ9.1VG0IMd2k7kRcHAZ_aXZOHqc_BY6aGjsw5VMUBqd4aU",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "58c80097-75f8-4934-9751-24d8c2994a87",
+          "name": "Search hotels By User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/searchListOfHotelsByUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "searchListOfHotelsByUser"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"O\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJlMDU2NWI0ZS00YTJiLTQ3NTAtOGI1MS0wYzBiY2Y4MmIwZWQiLCJzdWIiOiJiMUBnbWFpbC5jb20iLCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSIsImlhdCI6MTc4MDU4MjEwMCwiZXhwIjoxNzgxMTg2OTAwLCJ0eXAiOiJyZWZyZXNoIiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdfQ.cnWCNJx78xAfgcXKNGgrochocitSYMLfraklZBAHBao",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "575ae236-5372-48ac-a9fc-534a8eabdbe1",
+          "name": "Post Users",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "register"
+              ],
+              "port": "8080"
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\":\"a@gmail.com\",\"name\":\"Test1\",\"password\":\"a123\",\"companyName\":\"AItravel\",\"address\":\"\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "27e49176-9cf7-4946-8dac-68da43fecf55",
+          "name": "List Of Hotels",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/user/listOfHotelsOfUser",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "path": [
+                "user",
+                "listOfHotelsOfUser"
+              ],
+              "port": "8080"
+            },
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhQGdtYWlsLmNvbSIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiJST0xFX1VTRVIifV0sImVuYWJsZWQiOnRydWUsInR5cCI6ImFjY2VzcyIsImlhdCI6MTc4MTM3MTg4NywiZXhwIjoxNzgxNDU4Mjg3LCJpc3MiOiJhcGkuc3dhdGlzaGF3LmNvbSJ9.tvrNwY3hahLOP5OYldxvWT95rpRrXa6C0deg_cphCp",
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

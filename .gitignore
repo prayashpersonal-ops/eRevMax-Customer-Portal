@@ -1,0 +1,28 @@
+# Node / React
+node_modules/
+dist/
+.env
+.env.local
+
+# Java / Spring Boot
+target/
+*.class
+*.log
+
+# IntelliJ / VS Code
+.idea/
+.vscode/
+*.iml
+
+# Mac
+.DS_Store
+
+# Maven wrapper generated files
+.mvn/wrapper/maven-wrapper.jar
+
+# ZIP files
+*.zip
+
+# Secrets
+configurations/application-dev.yml
+configurations/application-dev-local.yml
