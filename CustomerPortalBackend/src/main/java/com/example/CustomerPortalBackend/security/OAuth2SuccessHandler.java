@@ -102,8 +102,13 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
 
         cookieService.attachRefreshCookie(response, refreshToken, (int) jwtService.getRefreshTokenValiditySeconds());
 
+        String dashboardUrl = frontendSuccessUrl;
+        if (dashboardUrl.endsWith("/auth/callback")) {
+            dashboardUrl = dashboardUrl.substring(0, dashboardUrl.length() - "/auth/callback".length()) + "/user";
+        }
+
         String redirectUrl = UriComponentsBuilder
-                .fromUriString(frontendSuccessUrl)
+                .fromUriString(dashboardUrl)
                 .queryParam("token", accessToken)
                 .build()
                 .encode()
